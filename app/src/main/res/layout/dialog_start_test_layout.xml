@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_white_bg">
+
+    <TextView
+        android:id="@+id/tv_test_title"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:gravity="center"
+        android:text="点击确认按钮开始TP测试"
+        android:textColor="#292c2b"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#313131"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_test_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="#292c2b"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_test_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:background="@drawable/dialog_ok_btn_bg"
+            android:text="Ok"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+</LinearLayout>

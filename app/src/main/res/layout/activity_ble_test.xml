@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.OpenThirdActivity">
+
+    <include layout="@layout/base_title_layout"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icon_home_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/tv_open_ble"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="打开蓝牙"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/ok_btn_bg"/>
+
+            <TextView
+                android:id="@+id/tv_ble"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="蓝牙串口"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/ok_btn_bg"/>
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="OK"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/ok_btn_bg"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

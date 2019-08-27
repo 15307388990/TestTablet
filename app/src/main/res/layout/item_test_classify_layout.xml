@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingConstraints"
+    android:background="@drawable/item_test_bg"
+    android:paddingTop="18dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="7dp"
+    android:paddingBottom="6dp"
+    android:paddingEnd="7dp"
+    android:paddingStart="10dp">
+
+    <ImageView
+        android:id="@+id/iv_test_classify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_lcd"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lcd"
+        android:textColor="@color/color48f"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@+id/iv_test_classify"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_test_classify"
+        app:layout_constraintLeft_toRightOf="@+id/iv_test_classify"
+        android:paddingLeft="7dp"
+        android:paddingStart="7dp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="27dp"
+        android:layout_height="18dp"
+        android:text="OK"
+        android:textColor="@drawable/item_test_text_status"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:background="@drawable/item_test_btn_bg"
+        app:layout_constraintRight_toLeftOf="@+id/tv_test_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tv_test_btn"
+        android:layout_width="54dp"
+        android:layout_height="18dp"
+        android:text="@string/test"
+        android:gravity="center"
+        android:textColor="#ff34383f"
+        android:textSize="11sp"
+        android:background="@drawable/item_test_btn_bg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SmallSp" />
+</android.support.constraint.ConstraintLayout>

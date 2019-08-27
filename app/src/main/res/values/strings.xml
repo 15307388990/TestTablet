@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TestTablet</string>
+    <string name="test">TEST</string>
+    <string name="lcd">LCD</string>
+    <string name="tp">TP</string>
+    <string name="cam">CAM</string>
+    <string name="ir">IR</string>
+    <string name="nfc">NFC</string>
+    <string name="wifi">WIFI</string>
+    <string name="bt">BT</string>
+    <string name="sp">SP</string>
+    <string name="mic">MIC</string>
+    <string name="ttl">TTL</string>
+    <string name="fourth_network">4G</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video</string>
+
+    <string name="select_serial_port">串口设备:</string>
+    <string name="select_baud_rate">波特率</string>
+    <string name="open_serial_port">打开串口</string>
+    <string name="close_serial_port">关闭串口</string>
+    <string name="no_serial_device">找不到串口设备</string>
+    <string name="send_data">发送命令</string>
+    <string name="input_data">输入命令</string>
+    <string name="load_cmd_list">加载命令列表</string>
+</resources>

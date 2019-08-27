@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.BleActivity">
+
+    <include layout="@layout/base_title_layout"/>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icon_home_bg"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_open_ble"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:text="打开蓝牙"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:background="@drawable/dialog_wifi_ok_btn_bg"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icon_home_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_cmd"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/dialog_white_bg"
+            android:hint="请输入蓝牙指令"
+            android:gravity="left"
+            android:padding="10dp"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/dialog_white_bg"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蓝牙设备："
+                android:textSize="14sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_devices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/dialog_white_bg"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="波特率："
+                android:textSize="14sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_baudrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                tools:entries="@array/baudrates"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_open_ble"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="打开蓝牙"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/ok_btn_bg"/>
+
+            <TextView
+                android:id="@+id/tv_send_data"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="发送"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/ok_btn_bg"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_history_data"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/dialog_white_bg" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="Ok"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/ok_btn_bg"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</LinearLayout>
