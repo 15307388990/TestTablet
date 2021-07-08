@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingTop="184dp"
+        android:paddingTop="30dp"
         android:gravity="center_horizontal"
         android:background="@drawable/icon_home_bg">
 

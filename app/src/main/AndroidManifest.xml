@@ -3,16 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cx.testtablet">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- <uses-permission android:name="INTERACT_ACROSS_USERS"/> -->
-    <uses-permission
-        android:name="android.permission.INTERACT_ACROSS_USERS"
-        tools:ignore="ProtectedPermissions" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -32,25 +22,21 @@
             android:name=".ui.FourthNetworkActivity"
             android:screenOrientation="portrait" />
 
-        <meta-data
-            android:name="design_width_in_dp"
-            android:value="400" />
-        <meta-data
-            android:name="design_height_in_dp"
-            android:value="640" />
-
         <activity
             android:name=".ui.TTLActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.BleActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.SPActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.MicActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity
             android:name=".ui.WebViewActivity"
             android:screenOrientation="portrait" />
@@ -72,9 +58,17 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="400" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -87,5 +81,18 @@
         </provider>
 
     </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- <uses-permission android:name="INTERACT_ACROSS_USERS"/> -->
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

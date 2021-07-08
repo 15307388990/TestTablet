@@ -6,7 +6,6 @@ import android.serialport.SerialPort;
 import com.cx.testtablet.comn.message.LogManager;
 import com.cx.testtablet.comn.message.SendMessage;
 import com.cx.testtablet.utils.ByteUtil;
-import com.licheedev.myutils.LogPlus;
 
 import java.io.File;
 import java.io.IOException;
@@ -85,7 +84,6 @@ public class SerialPortManager {
 
             return mSerialPort;
         } catch (Throwable tr) {
-            LogPlus.e(TAG, "打开串口失败", tr);
             close();
             return null;
         }
@@ -142,7 +140,6 @@ public class SerialPortManager {
                     emitter.onNext(new Object());
                 } catch (Exception e) {
 
-                    LogPlus.e("发送：" + ByteUtil.bytes2HexStr(datas) + " 失败", e);
 
                     if (!emitter.isDisposed()) {
                         emitter.onError(e);
@@ -160,7 +157,6 @@ public class SerialPortManager {
     public void sendCommand(final String command) {
 
         // TODO: 2018/3/22  
-        LogPlus.i("发送命令：" + command);
 
         byte[] bytes = ByteUtil.hexStr2bytes(command);
         rxSendData(bytes).subscribeOn(mSendScheduler).subscribe(new Observer<Object>() {

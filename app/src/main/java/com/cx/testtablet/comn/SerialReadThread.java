@@ -5,7 +5,6 @@ import android.os.SystemClock;
 import com.cx.testtablet.comn.message.LogManager;
 import com.cx.testtablet.comn.message.RecvMessage;
 import com.cx.testtablet.utils.ByteUtil;
-import com.licheedev.myutils.LogPlus;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -29,7 +28,6 @@ public class SerialReadThread extends Thread {
         byte[] received = new byte[1024];
         int size;
 
-        LogPlus.e("开始读线程");
 
         while (true) {
 
@@ -50,12 +48,10 @@ public class SerialReadThread extends Thread {
                     SystemClock.sleep(1);
                 }
             } catch (IOException e) {
-                LogPlus.e("读取数据失败", e);
             }
             //Thread.yield();
         }
 
-        LogPlus.e("结束读进程");
     }
 
     /**
@@ -78,7 +74,6 @@ public class SerialReadThread extends Thread {
         try {
             mInputStream.close();
         } catch (IOException e) {
-            LogPlus.e("异常", e);
         } finally {
             super.interrupt();
         }

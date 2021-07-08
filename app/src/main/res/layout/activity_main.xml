@@ -8,13 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@color/titleColor"
-        android:text="@string/test"
         android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/colorWhite"/>
+        android:text="@string/test"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,15 +24,16 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/icon_home_bg"/>
+            android:background="@drawable/icon_home_bg" />
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rc_home"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
-            android:paddingRight="16dp"/>
+            android:paddingRight="16dp" />
+
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
