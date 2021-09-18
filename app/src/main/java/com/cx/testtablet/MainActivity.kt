@@ -3,7 +3,6 @@ package com.cx.testtablet
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -21,6 +20,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_start_test_layout.view.*
 import pub.devrel.easypermissions.EasyPermissions
 import java.io.File
+import java.io.FileWriter
+import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +36,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         init()
     }
 
@@ -56,7 +56,13 @@ class MainActivity : AppCompatActivity() {
                 1 -> startActivityForResult(Intent(this, TpActivity::class.java), GO_TEST)
                 2 -> startActivityForResult(Intent(this, CamActivity::class.java), GO_TEST)
                 3 -> startActivityForResult(Intent(this, IRActivity::class.java), GO_TEST)
-                4 -> Toast.makeText(this, "NFC等待提供方案", Toast.LENGTH_SHORT).show()
+                4 -> if (check()) {
+                    list[current] = 2
+                    adapter.notifyItemChanged(current)
+                } else {
+                    list[current] = 1
+                    adapter.notifyItemChanged(current)
+                }
                 5 -> startActivityForResult(Intent(this, WifiActivity::class.java), GO_TEST)
                 /*6 -> startActivityForResult(Intent(this, TTLActivity::class.java)
                         .putExtra("type",1),GO_TEST)*/
@@ -64,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 7 -> startActivityForResult(Intent(this, SPActivity::class.java), GO_TEST)
                 8 -> startActivityForResult(Intent(this, MicActivity::class.java), GO_TEST)
                 9 -> startActivityForResult(Intent(this, OpenThirdActivity::class.java), GO_TEST)
-               10 -> startActivityForResult(Intent(this, FourthNetworkActivity::class.java), GO_TEST)
+                10 -> startActivityForResult(Intent(this, FourthNetworkActivity::class.java), GO_TEST)
             }
         }
         tv_title.setText("TEXT" + getVersionName());
@@ -172,6 +178,23 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()
         }
         return versionNam
+    }
+
+    /**
+     *
+     */
+    fun check(): Boolean {
+        var res = true
+        val file = File("/dev/ttyUSB0")
+        try {
+            if (!file.exists()) {
+                res = false
+            }
+        } catch (ex: IOException) {
+            res = false
+            ex.printStackTrace()
+        }
+        return res
     }
 
 }
